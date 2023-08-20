@@ -1,7 +1,8 @@
 package org.example;
 
-public interface ICalculator {
+public interface ComplexRepository {
+
     ComplexDigit sumComplex(ComplexDigit a, ComplexDigit b);
-//    ComplexDigit multiplyComplex(ComplexDigit a, ComplexDigit b);
-//    ComplexDigit divisionComplex(ComplexDigit a, ComplexDigit b);
+    ComplexDigit multiplyComplex(ComplexDigit firstDigit, ComplexDigit secondDigit);
+    ComplexDigit divisionComplex(ComplexDigit firstDigit, ComplexDigit secondDigit);
 }

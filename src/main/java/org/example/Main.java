@@ -1,19 +1,18 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        var calc = new Calculator(new ComplexDigitService());
+        var cmp1 = new ComplexDigit(1, 7);
+        var cmp2 = new ComplexDigit(3, 8);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        var addition = calc.sumComplex(cmp1, cmp2);
+        System.out.println("(" + cmp1 + ") + (" + cmp2 + ") = " + addition);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        var mult = calc.multiplyComplex(cmp1, cmp2);
+        System.out.println("(" + cmp1 + ") * (" + cmp2 + ") = " + mult);
+
+        var div = calc.divisionComplex(cmp1, cmp2);
+        System.out.println("(" + cmp1 + ") / (" + cmp2 + ") = " + div);
     }
 }
